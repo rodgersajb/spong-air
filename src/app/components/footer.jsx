@@ -31,13 +31,10 @@ export default function Footer() {
         </li>
         <li className="flex flex-col gap-8">
           <h4 className="text-xl">Contact</h4>
-          <li>
-            <p>spong@sponair.com</p>
-          </li>
-          <li>
-            <p>904-433-2322</p>
-          </li>
-          <li></li>
+
+          <p>spong@sponair.com</p>
+
+          <p>904-433-2322</p>
         </li>
       </ul>
     </footer>
