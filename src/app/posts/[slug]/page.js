@@ -1,3 +1,12 @@
+export async function generateStaticParams() {
+    const res = await fetch(`${process.env.WP_API_URL}/posts`);
+    const data = await res.json();
+    const paths = data.map((post) => ({
+        params: { slug: post.slug },
+    }));
+    return paths;
+}
+
 export default async function PostPage({ params }) {
   console.log(params, "uri");
   const res = await fetch(

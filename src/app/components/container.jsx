@@ -1,15 +1,14 @@
 import Image from "next/image";
-import screwdriver from "../../../public/screwdriver.jpg";
-import handyman from "../../../public/handyman.jpg";
-import tools from "../../../public/tools.jpg";
-import repairman from "../../../public/repairman.jpg";
+
 
 export default function Container() {
   return (
     <>
       <Image
-        className="aspect-video object-cover h-[600px]"
-        src={screwdriver}
+        className="aspect-video object-cover "
+        src="/images/screwdriver.jpg"
+        height={600}
+        width={600}
         alt="HVAC technician with screwdriver"
       />
 
@@ -29,8 +28,10 @@ export default function Container() {
       </ul>
       <div className="w-2/3 m-auto flex justify-evenly gap-12">
         <Image
-          className="object-square h-[400px] w-[400px]"
-          src={handyman}
+          className="object-square "
+          height={400}
+          width={400}
+          src="/images/handyman.jpg"
           alt="HVAC technician with screwdriver"
         />
         <div className="flex flex-col items-start justify-evenly w-1/2">
@@ -83,12 +84,14 @@ export default function Container() {
       </main>
       <aside>
         <Image
-          className="aspect-video object-cover h-[600px]"
-          src={tools}
+          className="aspect-video object-cover "
+          height={600}
+          width={600}
+          src="/images/tools.jpg"
           alt="HVAC tools"
         />
       </aside>
-      <section className="flex items-center justify-between w-3/4 m-auto pt-20 pb-20">
+      <section className="flex items-center justify-between w-3/4 m-auto">
         <div className="flex flex-col items-start gap-4 w-full">
           <h2 className="text-4xl">
             Don’t just take our word for it! Hear from our satisfied customers
@@ -109,7 +112,13 @@ export default function Container() {
           <p className="font-bold">- John Martinez</p>
         </div>
         <div className="w-full">
-          <Image className="  object-contain h-[600px]" src={repairman} alt="HVAC technician with screwdriver" />
+          <Image
+            className="  object-contain "
+            height={600}
+            width={600}
+            src="/images/repairman.jpg"
+            alt="HVAC technician with screwdriver"
+          />
         </div>
       </section>
     </>

@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import logo from "../../../public/logo.JPG";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -32,7 +32,13 @@ export default function Navbar() {
   return (
     <nav className="flex w-11/12 m-auto justify-between items-center h-32">
       <Link href="/">
-        <Image className="w-[200px] h-[140px]" src={logo} alt="logo" />
+        <Image
+          className=""
+          width={100}
+          height={100}
+          src="/images/logo.JPG"
+          alt="logo"
+        />
       </Link>
       <div className="flex justify-center items-center gap-2">
         <ul className="flex gap-6">
@@ -46,7 +52,7 @@ export default function Navbar() {
               <Link href={link.href}>{link.label}</Link>
             </li>
           ))}
-        </ul>      
+        </ul>
         <button className="border-2 border-sky-950 p-2">Contact Us</button>
       </div>
     </nav>
