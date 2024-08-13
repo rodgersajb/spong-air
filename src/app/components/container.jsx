@@ -3,14 +3,17 @@ import Image from "next/image";
 
 export default function Container() {
   return (
-    <>
-      <Image
-        className="aspect-video object-cover "
-        src="/images/screwdriver.jpg"
-        height={600}
-        width={600}
-        alt="HVAC technician with screwdriver"
-      />
+    <main className="w-full"> 
+      <figure className="min-h-[400px] w-full">
+        <div className="relative w-full h-[400px]">
+          <Image
+            className="aspect-video object-cover "
+            src="/images/screwdriver.jpg"
+            fill
+            alt="HVAC technician with screwdriver"
+          />
+        </div>
+      </figure>
 
       <ul className="w-1/2 min-h-60 m-auto flex items-center justify-evenly">
         <li className="flex flex-col gap-2">
@@ -121,6 +124,6 @@ export default function Container() {
           />
         </div>
       </section>
-    </>
+    </main>
   );
 }

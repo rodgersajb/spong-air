@@ -4,16 +4,15 @@ export default async function ServicesPage() {
   return (
     <main className="flex flex-col gap-10 w-full">
       <h1 className="text-6xl text-center">Our Services</h1>
-      <figure className="h-[400px] w-full">
-        <Image
-          src="/images/equipment.jpg"
-          height={200}
-          width={400}
-          objectFit="cover"
-          
-          alt="HVAC technician with screwdriver"
-          className="object-cover aspect-video "
-        />
+      <figure className="min-h-[400px] w-full">
+        <div className="relative w-full h-[400px]">
+          <Image
+            src="/images/equipment.jpg"
+            className="w-full h-[400px] object-cover  "
+            fill
+            alt="HVAC technician with screwdriver"
+          />
+        </div>
       </figure>
       <section className="w-4/5 m-auto flex items-center justify-center gap-20">
         <div className="flex flex-col gap-6 w-1/3">
@@ -95,10 +94,12 @@ export default async function ServicesPage() {
           />
         </figure>
       </section>
-      <section className="w-full h-[100px] flex items-center bg-amber-200">
+      <section className="w-full min-h-[200px] flex items-center bg-amber-200">
         <div className="w-3/5 m-auto flex items-center justify-between">
           <h2 className="text-4xl">Get in Touch with Our HVAC Experts!</h2>
-          <button className="border-2 border-gray-800 py-2 px-4">Contact Us</button>
+          <button className="border-2 border-gray-800 py-2 px-4">
+            Contact Us
+          </button>
         </div>
       </section>
     </main>
