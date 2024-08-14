@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 export default function Contact() {
   return (
     <main className="w-full flex flex-col gap-10">
@@ -11,7 +12,7 @@ export default function Contact() {
           height={400}
           width={800}
           alt="Air conditioning units"
-          className="object-cover" 
+          className="object-cover"
         />
       </header>
       <form

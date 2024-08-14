@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Container() {
   return (
-    <main className="w-full"> 
+    <main className="w-full">
       <figure className="min-h-[400px] w-full">
         <div className="relative w-full h-[400px]">
           <Image
@@ -85,16 +85,18 @@ export default function Container() {
           </ul>
         </div>
       </main>
-      <aside>
-        <Image
-          className="aspect-video object-cover "
-          height={600}
-          width={600}
-          src="/images/tools.jpg"
-          alt="HVAC tools"
-        />
-      </aside>
-      <section className="flex items-center justify-between w-3/4 m-auto">
+      <figure className="min-h-[400px] w-full">
+        <div className="relative w-full h-[400px]">
+          <Image
+            className="aspect-video object-cover "            
+            src="/images/tools.jpg"
+            fill
+            alt="HVAC tools"
+          />
+        </div>
+      </figure>
+      
+      <section className="flex items-center justify-between w-3/4 m-auto py-28 gap-20">
         <div className="flex flex-col items-start gap-4 w-full">
           <h2 className="text-4xl">
             Don’t just take our word for it! Hear from our satisfied customers

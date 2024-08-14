@@ -1,21 +1,51 @@
+"use client";
 import Image from "next/image";
+import { animate, motion } from "framer-motion";
 
-export default async function ServicesPage() {
+const fadeInAnimation = {
+  initial: { opacity: 0, y: 100 },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+};
+
+const imageAnimation = {
+  initial: { opacity: 0, y: 50 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, ease: "easeOut" },
+};
+
+export default function ServicesPage() {
   return (
     <main className="flex flex-col gap-10 w-full">
       <h1 className="text-6xl text-center">Our Services</h1>
       <figure className="min-h-[400px] w-full">
-        <div className="relative w-full h-[400px]">
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={imageAnimation}
+          className="relative w-full h-[400px]"
+        >
           <Image
             src="/images/equipment.jpg"
             className="w-full h-[400px] object-cover  "
             fill
             alt="HVAC technician with screwdriver"
           />
-        </div>
+        </motion.div>
       </figure>
       <section className="w-4/5 m-auto flex items-center justify-center gap-20">
-        <div className="flex flex-col gap-6 w-1/3">
+        <motion.div
+          variants={fadeInAnimation}
+          initial="initial"
+          animate="animate"
+          transition={{ delay: 0.5, duration: 1 }}
+          viewport={{
+            once: true,
+          }}
+          className="flex flex-col gap-6 w-1/3"
+        >
           <h2 className="text-3xl">AC Installation</h2>
           <p>
             Stay cool and comfortable with our expert AC installation. We ensure
@@ -29,7 +59,7 @@ export default async function ServicesPage() {
             system. Plus, our friendly service means youʼre never alone. Let us
             help you enjoy the perfect indoor climate today!
           </p>
-        </div>
+        </motion.div>
         <figure>
           <Image
             src="/images/lego-guy.jpg"
@@ -50,7 +80,16 @@ export default async function ServicesPage() {
             className="object-cover aspect-square"
           />
         </figure>
-        <div className="flex flex-col gap-6 w-1/3">
+        <motion.div
+          variants={fadeInAnimation}
+          initial="initial"
+          whileInView="animate"
+          transition={{ delay: 0.5, duration: 1 }}
+          viewport={{
+            once: true,
+          }}
+          className="flex flex-col gap-6 w-1/3"
+        >
           <h2 className="text-3xl">Heating Repair</h2>
           <p>
             Is your heater acting up? Don’t worry! Our heating repair service is
@@ -64,10 +103,19 @@ export default async function ServicesPage() {
             clear communication. Trust us to restore comfort to your home so you
             can relax and enjoy the season!
           </p>
-        </div>
+        </motion.div>
       </section>
       <section className="w-4/5 m-auto flex items-center justify-center gap-20 ">
-        <div className="flex flex-col gap-6 w-1/3">
+        <motion.div
+          variants={fadeInAnimation}
+          initial="initial"
+          whileInView="animate"
+          transition={{ delay: 0.5, duration: 1 }}
+          viewport={{
+            once: true,
+          }}
+          className="flex flex-col gap-6 w-1/3"
+        >
           <h2 className="text-3xl">Maintenance Plans</h2>
           <p>
             Keep your HVAC system running smoothly with our maintenance plans.
@@ -83,7 +131,7 @@ export default async function ServicesPage() {
             big problems. Sign up and enjoy a worry-free HVAC experience. Stay
             comfortable, no matter the season!
           </p>
-        </div>
+        </motion.div>
         <figure>
           <Image
             src="/images/screwdriver-guy.jpg"
