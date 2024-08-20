@@ -3,7 +3,7 @@ import Link from "next/link";
 export default async function PostsPage() {
   const res = await fetch(`${process.env.WP_API_URL}/posts`);
   const data = await res.json();
-
+  console.log(data);
   return (
     <main>
       <h1>The Latest from Spong-Air</h1>

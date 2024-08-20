@@ -36,7 +36,7 @@ export default function Navbar() {
           className=""
           width={180}
           height={100}
-          src="/images/logo.JPG"
+          src="/images/Spongair-logo.JPG"
           alt="logo"
         />
       </Link>

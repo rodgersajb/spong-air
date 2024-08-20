@@ -1,19 +1,26 @@
 import Image from "next/image";
 
 
+
+
 export default function Contact() {
   return (
     <main className="w-full flex flex-col gap-10">
       <header className="flex flex-col justify-center gap-10 items-center">
         <h1 className="text-6xl">Contact Us</h1>
-
-        <Image
-          src="/images/air-conditioning.jpg"
-          height={400}
-          width={800}
-          alt="Air conditioning units"
-          className="object-cover"
-        />
+        <figure className="min-h-[400px] w-full">
+          <div
+            
+            className="relative w-full h-[400px]"
+          >
+            <Image
+              src="/images/air-conditioning.jpg"
+              className="object-cover"
+              fill
+              alt="Air conditioning units"
+            />
+          </div>
+        </figure>
       </header>
       <form
         className="flex flex-col justify-center items-center w-1/3 m-auto gap-4"
