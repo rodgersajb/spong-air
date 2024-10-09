@@ -12,23 +12,26 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        lightBrown: "#655853",
+        spongBlue: " #1e4055",
+        spongDarkBlue: "#143452",
+      },
       keyframes: {
         "open-menu": {
-          "0%": { transform: "scaleY(0)" },
-          "80%": {
-            transform: "scaleY(1.2)",
-          },
-          "100%": { transform: "scaleY(1)" },
+          "0%": { transform: "scaleX(0)" },
+
+          "100%": { transform: "scaleX(1)" },
         },
         "close-menu": {
-          "0%": { transform: "scaleY(1)" },
-          "20%": { transform: "scaleY(1.2)" },
-          "100%": { transform: "scaleY(0)" },
+          "0%": { transform: "scaleX(1)" },
+
+          "100%": { transform: "scaleX(0)" },
         },
       },
       animation: {
-        "open-menu": "open-menu 0.5s ease-in-out forwards",
-        "close-menu": "close-menu 0.5s ease-in-out forwards",
+        "open-menu": "open-menu 0.3s ease-in-out forwards",
+        "close-menu": "close-menu 0.3s ease-in-out forwards",
       },
     },
   },

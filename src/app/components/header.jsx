@@ -1,17 +1,65 @@
+"use client";
 import Image from "next/image";
+import { animate, motion } from "framer-motion";
 
+const fadeInAnimation = {
+  initial: { opacity: 0, y: 60 },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 export default function Header() {
   return (
-    <header className="w-full min-h-72 flex flex-col items-center justify-center ">
-      <div className="w-full flex flex-col items-center justify-center gap-6">
-        <h1 className="text-xl">Stay Comfortable Year-Round with Our HVAC Experts!</h1>
-        <h4>
-          Our team ensures your home stays cozy in winter and cool in summer.
-          Trust us for fast, reliable HVAC services you can count on!
-        </h4>
-        <button className="border-slate-950 border-2 p-2">Get Started!</button>
+    <header className="relative w-full h-screen flex flex-col justify-end pb-6 overflow-hidden">
+      <Image
+        src="/images/home-page-pic.jpg"
+        alt="Background image"
+        fill
+        objectFit="cover"
+        className="opacity-80" // Adjust opacity if needed
+      />
+
+      <div className="absolute inset-0">
+        {/* Gradient overlay for improved text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-black opacity-70"></div>
+
+        {/* White gradient overlay for logo visibility */}
       </div>
+
+      <section className="relative z-45 flex flex-col items-center justify-end w-full p-8 text-center md:text-left">
+        <div className="flex items-center mb-4">
+          <motion.h1
+            variants={fadeInAnimation}
+            initial="initial"
+            animate="animate"
+            transition={{ delay: 0.2, duration: 1 }}
+            className="text-white text-4xl l font-bold leading-tight shadow-md"
+          >
+            Precision Work for Your Home
+          </motion.h1>
+        </div>
+        <motion.p
+          variants={fadeInAnimation}
+          initial="initial"
+          animate="animate"
+          transition={{ delay: 0.3, duration: 1 }}
+          className="text-white text-lg md:text-xl mt-4 max-w-xl"
+        >
+          Your comfort is our priority. Expert HVAC solutions tailored for you.
+        </motion.p>
+        <motion.button
+          variants={fadeInAnimation}
+          initial="initial"
+          animate="animate"
+          transition={{ delay: 0.4, duration: 0.6 }}
+          className="mt-6 bg-spongBlue hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-200"
+        >
+          Get Started
+        </motion.button>
+      </section>
     </header>
   );
 }
