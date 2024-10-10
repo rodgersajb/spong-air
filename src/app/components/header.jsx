@@ -17,6 +17,7 @@ export default function Header() {
         src="/images/home-page-pic.jpg"
         alt="Background image"
         fill
+        priority
         objectFit="cover"
         className="opacity-80" // Adjust opacity if needed
       />

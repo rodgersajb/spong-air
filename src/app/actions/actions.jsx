@@ -2,6 +2,7 @@
 
 import { Resend } from "resend";
 import { validateString } from "./utils";
+import EmailContact from "../email/email-contact";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -28,12 +29,7 @@ export const sendEmail = async (formData) => {
     from: "Contact Form <onboarding@resend.dev>",
     to: "rodgersajb@gmail.com",
     subject: "New Contact Form Submission",
-    reply_to: senderEmail,
-    name,
-    senderEmail,
-    // text: message,
-    // react: {
-
-    // }
+    reply_to: senderEmail,    
+    react: <EmailContact name={name} senderEmail={senderEmail} message={message} />,
   });
 };
