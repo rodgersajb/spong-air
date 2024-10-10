@@ -39,9 +39,11 @@ export default function MobileNavbar() {
     setOpenMenu(!openMenu);
   };
 
+   
+
   return (
-    <main className="w-full fixed top-0 left-0 z-50 ">
-      <nav className="fixed top-0 z-50 w-screen   ">
+    <main className="w-full fixed top-0 left-0 z-50  ">
+      <nav className="fixed top-0 z-50 w-screen backdrop-blur-sm  ">
         <div className=" flex w-full items-center justify-between z-40  h-16">
           <figure className="relative h-12 w-20 z-50">
             <Link href="/">
@@ -56,12 +58,12 @@ export default function MobileNavbar() {
           <div className="pr-2 z-50 sm:hidden">
             <button
               onClick={toggleMenu}
-              className=" text-2xl  focus:outline-none "
+              className=" text-2xl focus:outline-none "
             >
               {openMenu ? (
                 <IoClose className="text-spongBlue" />
               ) : (
-                <RxHamburgerMenu className="text-spongBlue" />
+                <RxHamburgerMenu className=" text-spongWhite" />
               )}
             </button>
           </div>

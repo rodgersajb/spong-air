@@ -16,6 +16,9 @@ module.exports = {
         lightBrown: "#655853",
         spongBlue: " #1e4055",
         spongDarkBlue: "#143452",
+        spongWhite: "#f5f5f5",
+        spongBlack: "#1a1a1a",
+        spongGrey: "#d1d1d1",
       },
       keyframes: {
         "open-menu": {

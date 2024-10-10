@@ -12,7 +12,7 @@ const fadeInAnimation = {
 
 export default function Header() {
   return (
-    <header className="relative w-full h-screen flex flex-col justify-end pb-6 overflow-hidden">
+    <header className="relative w-full h-screen flex flex-col justify-around pb-6 overflow-hidden">
       <Image
         src="/images/home-page-pic.jpg"
         alt="Background image"
@@ -24,7 +24,7 @@ export default function Header() {
       <div className="absolute inset-0">
         {/* Gradient overlay for improved text visibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-black opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-black opacity-60"></div>
 
         {/* White gradient overlay for logo visibility */}
       </div>
@@ -35,7 +35,7 @@ export default function Header() {
             variants={fadeInAnimation}
             initial="initial"
             animate="animate"
-            transition={{ delay: 0.2, duration: 1 }}
+            transition={{ delay: 0.1, duration: 1 }}
             className="text-white text-4xl l font-bold leading-tight shadow-md"
           >
             Precision Work for Your Home
@@ -45,8 +45,8 @@ export default function Header() {
           variants={fadeInAnimation}
           initial="initial"
           animate="animate"
-          transition={{ delay: 0.3, duration: 1 }}
-          className="text-white text-lg md:text-xl mt-4 max-w-xl"
+          transition={{ delay: 0.1, duration: 1 }}
+          className="text-white text-lg md:text-xl mt-4 max-w-xl font-semibold"
         >
           Your comfort is our priority. Expert HVAC solutions tailored for you.
         </motion.p>
@@ -54,7 +54,7 @@ export default function Header() {
           variants={fadeInAnimation}
           initial="initial"
           animate="animate"
-          transition={{ delay: 0.4, duration: 0.6 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
           className="mt-6 bg-spongBlue hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-200"
         >
           Get Started
