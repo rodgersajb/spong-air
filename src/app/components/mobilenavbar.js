@@ -39,6 +39,11 @@ export default function MobileNavbar() {
     setOpenMenu(!openMenu);
   };
 
+  const handleLinkClick = () => { 
+    setOpenMenu(false);
+  }
+
+
    
 
   return (
@@ -80,7 +85,7 @@ export default function MobileNavbar() {
                 pathname === link.href ? "sm:text-sky-950" : "sm:text-sky-950"
               }`}
             >
-              <Link href={link.href}>{link.label}</Link>
+              <Link href={link.href} onClick={handleLinkClick} >{link.label}</Link>
             </li>
           ))}
         </ul>

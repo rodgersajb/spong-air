@@ -18,23 +18,21 @@ const imageAnimation = {
 
 export default function ServicesPage() {
   return (
-    <main className="flex flex-col gap-10 w-full">
-      <h1 className="text-6xl text-center">Our Services</h1>
-      <figure className="min-h-[400px] w-full">
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={imageAnimation}
-          className="relative w-full h-[400px]"
-        >
-          <Image
-            src="/images/equipment.jpg"
-            className="w-full h-[400px] object-cover  "
-            fill
-            alt="HVAC technician with screwdriver"
-          />
-        </motion.div>
-      </figure>
+    <main className="flex flex-col items-center justify-center w-full">
+      <motion.div initial="initial" animate="animate" variants={imageAnimation}>
+        <Image
+          src="/images/equipment.jpg"
+          fill
+          alt="HVAC technician with screwdriver"
+          object-fit="cover"
+          priority
+          className="brightness-80 opacity-90"
+        />
+      </motion.div>
+      <header className="h-svh flex items-center justify-center ">
+        <h1 className="text-6xl text-center z-40 text-spongWhite shadow-md">Our Services</h1>
+      </header>
+
       <section className="w-4/5 m-auto flex items-center justify-center gap-20">
         <motion.div
           variants={fadeInAnimation}

@@ -6,7 +6,7 @@ export default async function AboutPage() {
     <main className="w-screen  bg-spongWhite text-spongWhite font-semibold ">
       <header className="h-svh flex flex-col bg-gradient-to-l from-spongWhite to-spongBlack relative">
         <div className="z-20 flex flex-col justify-center gap-4 pl-4 h-full  items-start ">
-          <h1 className="text-4xl font-semibold z-20 ">About Us</h1>
+          <h1 className="text-4xl font-semibold z-20 shadow-md">About Us</h1>
           <div>
             <h2 className="text-spongGrey text-2xl font-normal ">
               Expert Care.
@@ -21,8 +21,9 @@ export default async function AboutPage() {
 
       <Image
         src="/images/handyman.jpg"
-        className="object-cover z-1 opacity-80"
+        className="object-cover z-1 opacity-80 brightness-80"
         fill
+        priority
         alt="HVAC technician installing a unit"
       />
 
