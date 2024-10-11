@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import SubmitButton from "./submitButton";
 import { sendEmail } from "@/app/actions/actions";
+import toast from "react-hot-toast";
 
 export default function ContactForm() {
   const ref = useRef(null);
@@ -12,11 +13,12 @@ export default function ContactForm() {
         ref.current?.reset();
         try {
           await sendEmail(formData);
+          toast.success("Email sent successfully");
         } catch (error) {
-          console.error(error);
+          toast.error("Something went wrong while sending the email");
         }
       }}
-      className="flex flex-col justify-center items-center w-80 py-2 m-auto gap-4"
+      className="flex flex-col justify-center items-center w-80 py-8 m-auto gap-4"
     >
       <div className="flex flex-col gap-4 items-start justify-start w-full ">
         <label className="font-bold text-lightBrown" htmlFor="name">

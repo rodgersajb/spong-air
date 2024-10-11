@@ -7,7 +7,7 @@ export default async  function Contact() {
   return (
     <main className="w-full ">
       <header className="flex flex-col h-svh justify-center items-start relative bg-gradient-to-tr from-spongBlack to-spongWhite z-20">
-        <h1 className="text-5xl pl-2 z-10 text-spongWhite">Contact Us</h1>
+        <h1 className="text-5xl pl-2 z-10 text-spongWhite shadow-md">Contact Us</h1>
 
         <Image
           src="/images/air-conditioning.jpg"

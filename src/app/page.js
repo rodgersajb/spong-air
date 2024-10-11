@@ -7,7 +7,8 @@ export default async function Home() {
   const data = await res.json();
   console.log(data);
   return (
-    <>
+    <main className="w-svw overflow-x-hidden"
+    >
       <Head>
         <title>{data.title}</title>
         <meta name="description" content={data.description} />
@@ -17,6 +18,6 @@ export default async function Home() {
       </Head>
       <Header />
       <Container />
-    </>
+    </main>
   );
 }

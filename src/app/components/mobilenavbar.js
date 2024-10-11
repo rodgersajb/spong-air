@@ -42,8 +42,8 @@ export default function MobileNavbar() {
    
 
   return (
-    <main className="w-full fixed top-0 left-0 z-50  ">
-      <nav className="fixed top-0 z-50 w-screen backdrop-blur-sm  ">
+    <main className="w-svw fixed top-0 left-0 z-50 overflow-x-hidden ">
+      <nav className="fixed top-0 z-50 w-svw backdrop-blur-sm  ">
         <div className=" flex w-full items-center justify-between z-40  h-16">
           <figure className="relative h-12 w-20 z-50">
             <Link href="/">

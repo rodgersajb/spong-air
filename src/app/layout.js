@@ -1,6 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { Toaster } from "react-hot-toast";
+
 import MobileNavbar from "./components/mobilenavbar";
 import Footer from "./components/footer";
 
@@ -12,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <MobileNavbar />
         {children}
+        <Toaster position="bottom-center" />
 
         <Footer />
       </body>

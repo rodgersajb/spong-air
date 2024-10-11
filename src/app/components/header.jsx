@@ -12,7 +12,7 @@ const fadeInAnimation = {
 
 export default function Header() {
   return (
-    <header className="relative w-full h-screen flex flex-col justify-around pb-6 overflow-hidden">
+    <header className="relative w-svw h-screen flex flex-col justify-around pb-6 overflow-hidden">
       <Image
         src="/images/home-page-pic.jpg"
         alt="Background image"

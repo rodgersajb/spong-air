@@ -1,42 +1,45 @@
 import Link from "next/link";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="max-h-80 bg-slate-800 text-rose-50 flex w-full justify-around pt-10 pb-10">
-      <ul className="flex flex-col items-start gap-6 w-1/2">
-        <li>
-          <h2 className="text-3xl">Spongair</h2>
+    <footer className="w-svw bg-spongDarkBlue py-4 bg-gradient-to-b from-spongDarkBlue to-spongWhite text-spongWhite">
+      <ul className="flex flex-col w-96 m-auto gap-2 py-4">
+        <li className="border-b border-spongGrey text-spongWhite pb-2">
+          <Link href="/about">About</Link>
         </li>
-        <li>
-          <h5>A nice little description about the company and services</h5>
+        <li className="border-b border-spongGrey text-spongWhite pb-2">
+          <Link href="/services">Services</Link>
         </li>
-        <li className="flex gap-4">
-          <Link href="https://www.facebook.com">
-            <FaFacebook />
-          </Link>
-          <Link href="https://www.twitter.com">
-            <FaTwitter />
-          </Link>
-          <Link href="https://www.instagram.com">
-            <FaInstagram />
-          </Link>
+        <li className="border-b border-spongGrey text-spongWhite pb-2">
+          <Link href="/posts">Posts</Link>
+        </li>
+        <li className="border-b border-spongGrey text-spongWhite pb-2">
+          <Link href="/contact">Contact</Link>
         </li>
       </ul>
-      <ul className="flex gap-8 w-1/4">
-        <li className="flex flex-col gap-8">
-          <h4 className="text-xl">Our Work</h4>
-          <p>About</p>
-          <p>Blog</p>
+      <h4 className="w-96 m-auto font-semibold text-lg ">Follow</h4>
+      <ul className=" flex gap-2 w-96 m-auto py-4 ">
+        <li>
+          <FaFacebook />
         </li>
-        <li className="flex flex-col gap-8">
-          <h4 className="text-xl">Contact</h4>
-
-          <p>spong@sponair.com</p>
-
-          <p>904-433-2322</p>
+        <li>
+          <FaTwitter />
+        </li>
+        <li>
+          <FaInstagram />
         </li>
       </ul>
+      <figure className="relative w-full h-44">
+        <Image
+          src="/images/spong-logo.png"
+          alt="logo"
+          className="w-20 m-auto" 
+          fill
+          objectFit="contain"
+        />
+      </figure>
     </footer>
   );
 }
