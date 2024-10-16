@@ -1,3 +1,4 @@
+import SpongCarousel from "./components/carousel";
 import Container from "./components/container";
 import Header from "./components/header";
 import Head from "next/head";
@@ -17,6 +18,7 @@ export default async function Home() {
         <meta name="author" content={data.author} />
       </Head>
       <Header />
+      
       <Container />
     </main>
   );

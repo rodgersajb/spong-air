@@ -21,7 +21,7 @@ export default async function AboutPage() {
 
       <Image
         src="/images/handyman.jpg"
-        className="object-cover z-1 opacity-80 brightness-80"
+        className="object-cover z-1 opacity-80 brightness-60"
         fill
         priority
         alt="HVAC technician installing a unit"

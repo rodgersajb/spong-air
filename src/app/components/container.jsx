@@ -1,50 +1,76 @@
+"use client";
+
 import Image from "next/image";
+import splitStringRegex from "@/utils/splitStringRegex";
+import { motion, variants } from "framer-motion";
+
+const heading = `Our Commitment to Quality and Comfort`;
+const text = `At our HVAC company, we believe in putting people first. We are
+passionate about creating comfortable spaces for you and your
+family. Every job we do reflects our dedication to quality, honesty,
+and exceptional service.`;
+
+const characterVariants = {
+  hidden: { opacity: 0 },
+  reveal: { opacity: 1 },
+};
+
 
 
 export default function Container() {
+  const headingCharacters = splitStringRegex(heading);
+  const textCharacters = splitStringRegex(text);
+
+  console.log('simple split', text.split('')
+  
+)
+  console.log(headingCharacters);
+  console.log(textCharacters);
+
   return (
     <main className="w-full">
-      <figure className="min-h-[400px] w-full">
-        <div className="relative w-full h-[400px]">
+      {/* <figure className="min-h-[400px] w-full relative">
+
           <Image
             className="aspect-video object-cover "
             src="/images/screwdriver.jpg"
             fill
             alt="HVAC technician with screwdriver"
           />
-        </div>
-      </figure>
+        
+      </figure> */}
 
-      <ul className="w-1/2 min-h-60 m-auto flex items-center justify-evenly">
-        <li className="flex flex-col gap-2">
-          <h5 className="text-4xl">1.</h5>
-          <h5>Expert Service</h5>
-        </li>
-        <li className="flex flex-col gap-2">
-          <h5 className="text-4xl">100%</h5>
-          <h5>Satisfaction Guaranteed</h5>
-        </li>
-        <li className="flex flex-col gap-2">
-          <h5 className="text-4xl">5 Star</h5>
-          <h5>Top Rated</h5>
-        </li>
-      </ul>
-      <div className="w-2/3 m-auto flex justify-evenly gap-12">
-        <Image
-          className="object-square "
-          height={400}
-          width={400}
-          src="/images/handyman.jpg"
-          alt="HVAC technician with screwdriver"
-        />
-        <div className="flex flex-col items-start justify-evenly w-1/2">
-          <h2 className="text-4xl">Our Commitment to Quality and Comfort</h2>
-          <p>
-            At our HVAC company, we believe in putting people first. We’re
-            passionate about creating comfortable spaces for you and your
-            family. Every job we do reflects our dedication to quality, honesty,
-            and exceptional service.
-          </p>
+      <div className="w-full m-auto flex justify-evenly ">
+        <div className="flex flex-col items-start justify-evenly w-[95%] m-auto">
+          
+            <motion.h2
+              initial="hidden"
+              whileInView="reveal"
+              transition={{ staggerChildren: .02 }}
+              className="text-4xl"
+            >
+              {headingCharacters.map((char) => (
+                <motion.span
+                  key={char}
+                  transition={{ duration: 0.5 }}
+                  variants={characterVariants}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </motion.h2>
+            <motion.p initial="hidden" whileInView="reveal" transition={{ staggerChildren: .02}}>
+              {textCharacters.map((char) => (
+                <motion.span
+                  key={char}
+                  transition={{ duration: 0.5 }}
+                  variants={characterVariants}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </motion.p>
+          
           <p>
             Our skilled team works tirelessly to ensure your heating and cooling
             systems run perfectly. We take pride in our work and strive to
@@ -88,14 +114,14 @@ export default function Container() {
       <figure className="min-h-[400px] w-full">
         <div className="relative w-full h-[400px]">
           <Image
-            className="aspect-video object-cover "            
+            className="aspect-video object-cover "
             src="/images/tools.jpg"
             fill
             alt="HVAC tools"
           />
         </div>
       </figure>
-      
+
       <section className="flex items-center justify-between w-3/4 m-auto py-28 gap-20">
         <div className="flex flex-col items-start gap-4 w-full">
           <h2 className="text-4xl">
