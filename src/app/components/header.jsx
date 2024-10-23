@@ -14,7 +14,7 @@ const fadeInAnimation = {
 
 export default function Header() {
   return (
-    <header className="relative w-svw h-screen flex flex-col justify-around pb-6 overflow-hidden">
+    <header className="relative w-full h-screen flex flex-col justify-around pb-6 overflow-hidden">
       <Image
         src="/images/home-page-pic.jpg"
         alt="Background image"
@@ -27,13 +27,13 @@ export default function Header() {
       
 
       <section className="relative z-45 flex flex-col items-center justify-end w-full p-8 text-center md:text-left">
-        <div className="flex flex-col items-start mb-4">
+        <div className="flex flex-col items-center mb-4">
           <motion.h1
             variants={fadeInAnimation}
             initial="initial"
             animate="animate"
             transition={{ delay: 0.1, duration: 0.4 }}
-            className="text-white text-4xl l font-bold leading-tight "
+            className="text-white text-4xl font-bold leading-tight "
           >
             Precision Work for Your Home.
           </motion.h1>
@@ -42,7 +42,7 @@ export default function Header() {
             initial="initial"
             animate="animate"
             transition={{ delay: 0.1, duration: 0.4 }}
-            className="mt-6 bg-spongBlue hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded transition duration-200 w-3/4 flex items-center justify-between"
+            className="mt-6 bg-spongBlue hover:bg-lightBrown text-white font-semibold py-3 px-6 rounded w-3/4 flex items-center justify-between"
           >
             Contact <HiArrowSmRight />
           </motion.button>

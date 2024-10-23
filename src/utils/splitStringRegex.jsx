@@ -1,5 +1,5 @@
-function splitStringRegex(string) {
-  return string.split("").map((char) => (char === " " ? "\u00A0" : char)); 
+function splitWordsAndCharacters(text) {
+  return text.split(" ").map((word) => word.split(""));
 }
 
-export default splitStringRegex;
+export default splitWordsAndCharacters;

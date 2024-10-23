@@ -2,13 +2,14 @@ import SpongCarousel from "./components/carousel";
 import Container from "./components/container";
 import Header from "./components/header";
 import Head from "next/head";
+import Services from "./components/services";
 
 export default async function Home() {
   const res = await fetch(`${process.env.YOAST_API_URL}` );
   const data = await res.json();
   console.log(data);
   return (
-    <main className="w-svw overflow-x-hidden"
+    <main className="w-full"
     >
       <Head>
         <title>{data.title}</title>
@@ -18,8 +19,9 @@ export default async function Home() {
         <meta name="author" content={data.author} />
       </Head>
       <Header />
-      
       <Container />
+      <Services />
+      
     </main>
   );
 }
