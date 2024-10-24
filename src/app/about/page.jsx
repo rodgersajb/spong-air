@@ -27,7 +27,7 @@ export default async function AboutPage() {
         alt="HVAC technician installing a unit"
       />
 
-      <section className="w-screen m-auto py-4 bg-lightBrown font-normal flex flex-col gap-4 min-[400px]">
+      <section className="w-screen m-auto py-4 bg-spongBrown font-normal flex flex-col gap-4 min-[400px]">
         <p className=" text-sm w-80 m-auto text-center">
           Our expert team works closely with you, ensuring every installation
           and maintenance task is done with care and precision. We take pride in

@@ -21,7 +21,7 @@ export default function ServiceCard({item}) {
         initial={{ opacity: 0, x: -100 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.6 }}
-        className=""
+        className="w-[95%] m-auto"
       >
         <div className="flex items-center gap-2 py-4 text-spongDarkBlue font-semibold  ">
           <figure className="text-xl">{item.icon}</figure>
@@ -36,7 +36,7 @@ export default function ServiceCard({item}) {
           />
         </figure>
         <div className="w-full md:w-1/2">
-          <p className="text-sm text-spongGrey">{item.description}</p>
+          <p className="text-xs text-spongBrown">{item.description}</p>
         </div>
       </motion.section>
     );

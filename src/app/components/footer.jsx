@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
-import Image from "next/image";
+import { FaRegCopyright } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="w-svw bg-spongDarkBlue py-4 bg-gradient-to-b from-spongDarkBlue to-spongWhite text-spongWhite">
-      <ul className="flex flex-col w-96 m-auto gap-2 py-4">
+    <footer className="w-svw bg-spongDarkBlue py-4 text-spongWhite">
+      <ul className="flex flex-col w-[95%] m-auto gap-2 py-4">
         <li className="border-b border-spongGrey text-spongWhite pb-2">
           <Link href="/about">About</Link>
         </li>
@@ -19,27 +19,24 @@ export default function Footer() {
           <Link href="/contact">Contact</Link>
         </li>
       </ul>
-      <h4 className="w-96 m-auto font-semibold text-lg ">Follow</h4>
-      <ul className=" flex gap-2 w-96 m-auto py-4 ">
-        <li>
+      <ul className=" flex gap-4 w-[95%] m-auto py-4 ">
+        <li className="text-xl">
           <FaFacebook />
         </li>
-        <li>
+        <li className="text-xl">
           <FaTwitter />
         </li>
-        <li>
+        <li className="text-xl">
           <FaInstagram />
         </li>
       </ul>
-      <figure className="relative w-full h-44">
-        <Image
-          src="/images/spong-logo.png"
-          alt="logo"
-          className="w-20 m-auto" 
-          fill
-          objectFit="contain"
-        />
-      </figure>
+      <div className="w-[95%] m-auto ">
+        <h4 className="flex gap-1">
+          Copyright
+          <FaRegCopyright className="h-6 " />
+          2024. Spongair Mechanical. All rights reserved.
+        </h4>
+      </div>
     </footer>
   );
 }

@@ -35,8 +35,8 @@ const content = [
 export default function Services() {
   return (
     <main className="w-full">
-      <section className="w-[95%] m-auto flex flex-col gap-4 overflow-scroll">
-        <h2 className="text-3xl font-normal ">
+      <section className=" m-auto flex flex-col gap-4 overflow-scroll">
+        <h2 className="text-3xl font-normal px-4 ">
           Luxury{" "}
           <span className="font-bold text-spongBlue">
             {" "}
@@ -44,11 +44,11 @@ export default function Services() {
           </span>{" "}
           to Your Home
         </h2>
-        <div className="relative w-full py-10 ">
-          <TbBorderCornerSquare className="text-xl absolute top-0 left-0" />
-          <TbBorderCornerSquare className="text-xl absolute right-0 top-0 rotate-90 " />
-          <TbBorderCornerSquare className="text-xl -rotate-90 absolute bottom-0 left-0" />
-          <TbBorderCornerSquare className="text-xl rotate-180 absolute bottom-0 right-0"  />
+        <div className="relative w-full py-10 bg-spongGrey">
+          <TbBorderCornerSquare className="text-xl absolute top-2 left-0" />
+          <TbBorderCornerSquare className="text-xl absolute right-0 top-2 rotate-90 " />
+          <TbBorderCornerSquare className="text-xl -rotate-90 absolute bottom-2 left-0" />
+          <TbBorderCornerSquare className="text-xl rotate-180 absolute bottom-2 right-0"  />
 
           {content.map((item, index) => (
             <ServiceCard item={item} key={index} />

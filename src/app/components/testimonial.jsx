@@ -77,8 +77,7 @@ export default function Testimonial() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        
       </Carousel>
       <section className="py-12 bg-spongWhite text-center">
         <div className="w-[90%] max-w-2xl mx-auto">
