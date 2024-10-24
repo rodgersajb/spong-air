@@ -15,15 +15,17 @@ export default function ServiceCard({item}) {
          }
        }, [isInView]);
     return (
-      <motion.main
+    
+      <motion.section
         ref={ref}
         initial={{ opacity: 0, x: -100 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.6 }}
+        className=""
       >
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 py-4 text-spongDarkBlue font-semibold  ">
           <figure className="text-xl">{item.icon}</figure>
-          <h3 className="text-xl font-semibold text-spongBlue">{item.title}</h3>
+          <h3 className="text-lg  ">{item.title}</h3>
         </div>
         <figure className="relative h-[250px] w-full">
           <Image
@@ -36,6 +38,6 @@ export default function ServiceCard({item}) {
         <div className="w-full md:w-1/2">
           <p className="text-sm text-spongGrey">{item.description}</p>
         </div>
-      </motion.main>
+      </motion.section>
     );
 }

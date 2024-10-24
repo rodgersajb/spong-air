@@ -1,8 +1,9 @@
-import SpongCarousel from "./components/carousel";
+
 import Container from "./components/container";
 import Header from "./components/header";
 import Head from "next/head";
 import Services from "./components/services";
+import Testimonial from "./components/testimonial";
 
 export default async function Home() {
   const res = await fetch(`${process.env.YOAST_API_URL}` );
@@ -21,6 +22,7 @@ export default async function Home() {
       <Header />
       <Container />
       <Services />
+      <Testimonial />
       
     </main>
   );
