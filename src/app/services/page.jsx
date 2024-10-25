@@ -217,22 +217,34 @@ export default function ServicesPage() {
           fill
           alt="HVAC technician with screwdriver"
           priority
-          className="brightness-80 opacity-90 object-cover"
+          className="brightness-80 opacity-90 object-cover "
         />
         <div className="absolute inset-0 bg-black opacity-30 z-30"></div>
       </header>
-      <section className="w-[95%] m-auto">
-        <h2 className="text-3xl font-semibold">
-          Our expertise and cutting-edge technology ensure your HVAC systems are
-          efficient, reliable, and prepared for any climate.
+      <section className="w-[95%] m-auto  py-4 lg:pt-10">
+        <h2 className="text-3xl lg:w-1/2">
+          Our{" "}
+          <span className="relative text-spongBrown font-semibold ">
+            expertise and cutting-edge
+            <Image
+              src="/images/arrow-5.svg"
+              height={400}
+              width={400}
+              alt="Arrow pointing right"
+              className="absolute -top-[70px] right-0 left-0 "
+            />
+          </span>{" "}
+          technology ensure your HVAC systems are <span className="font-bold text-spongBlue pr-1">efficient,</span>
+          <span className="italic text-spongBrown ">reliable,</span>
+          and <span className="font-semibold text-spongDarkBlue  relative before:content-[''] before:absolute before:h-[2px] before:w-full before:bg-spongDarkBlue before:bottom-0 ">prepared</span> for any climate.
         </h2>
-        <div></div>
-        <h4 className="text-xl pt-8 font-semibold relative before:content-[''] before:absolute before:h-[2px] before:w-[25%] before:right-0 before:left-0 before:bg-spongBlue before:bottom-0">
+
+        <h4 className="text-xl pt-8 font-semibold lg:text-2xl ">
           What We <span className="text-spongBlue">Provide.</span>
         </h4>
-        <ul className="">
+        <ul className="lg:flex lg:gap-2 lg:flex-wrap  lg:w-full lg:m-auto lg:justify-between lg:items-center">
           {services.map((service, index) => (
-            <li key={index} className="py-4 relative">
+            <li key={index} className="py-4 relative lg:w-1/3 lg:basis-1/3">
               <h3 className="text-2xl font-semibold border-l-8 border-spongBlue pl-2">
                 {service.category}
               </h3>
@@ -244,11 +256,11 @@ export default function ServicesPage() {
                 className={`absolute even:-bottom-[135px] even:-right-[10px] odd:-left-[40px] odd:top-0`} // position arrow
               /> */}
 
-              <ul className="flex flex-col gap-2 pt-2">
+              <ul className="flex flex-col gap-2 pt-2   ">
                 {service.items.map((item, index) => (
                   <motion.li
                     key={index}
-                    className="p-2 even:bg-spongLightBlue rounded-lg first:bg-spongLightBrown even:text-spongDarkBlue first:text-spongBrown last:relative last:bg-spongGrey last:text-spongBlack min-h-[85px]"
+                    className="p-2 even:bg-spongLightBlue rounded-lg first:bg-spongLightBrown even:text-spongDarkBlue first:text-spongBrown last:relative last:bg-spongGrey last:text-spongBlack min-h-[85px] "
                     variants={fadeInAnimation}
                     initial="initial"
                     whileInView="animate"
