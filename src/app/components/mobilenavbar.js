@@ -126,6 +126,8 @@ export default function MobileNavbar() {
           </figure>
           <div className="pr-2 z-50 lg:hidden">
             <button
+              id="menu-toggle"
+              aria-label="menu toggle"
               onClick={toggleMenu}
               className=" text-2xl focus:outline-none "
             >
@@ -138,7 +140,7 @@ export default function MobileNavbar() {
           </div>
         </div>
         <ul
-          className={` min-h-svh w-full bg-[url('/images/gradient-3.png')] bg-cover  absolute top-0 right-0 flex flex-col justify-center gap-6 items-start origin-right z-49   ${
+          className={` min-h-svh w-full bg-spongWhite absolute top-0 right-0 flex flex-col justify-center gap-6 items-start origin-right z-49   ${
             openMenu ? " animate-open-menu " : " animate-close-menu h-0"
           }`}
         >
@@ -150,7 +152,7 @@ export default function MobileNavbar() {
               whileInView="animate"
               viewport={{ once: true }}
               custom={index}
-              className={`text-spongWhite uppercase font-semibold flex items-center pl-4 gap-2 ${
+              className={`text-spongDarkBlue uppercase font-semibold flex items-center pl-4 gap-2 ${
                 pathname === link.href ? "sm:text-sky-950" : "sm:text-sky-950"
               }`}
             >
