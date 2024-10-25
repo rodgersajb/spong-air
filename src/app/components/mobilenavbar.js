@@ -92,7 +92,7 @@ export default function MobileNavbar() {
 
   return (
     <main className="w-svw fixed top-0 left-0 z-50 overflow-x-hidden ">
-      <nav className="w-full flex bg-spongWhite items-center justify-between px-4 ">
+      <nav className="hidden lg:flex w-full bg-spongWhite items-center justify-between px-4 ">
         <figure className="relative h-[70px] w-[110px]">
           <Link href="/">
             <Image
@@ -124,7 +124,7 @@ export default function MobileNavbar() {
               />
             </Link>
           </figure>
-          <div className="pr-2 z-50 sm:hidden">
+          <div className="pr-2 z-50 lg:hidden">
             <button
               onClick={toggleMenu}
               className=" text-2xl focus:outline-none "
@@ -138,7 +138,7 @@ export default function MobileNavbar() {
           </div>
         </div>
         <ul
-          className={` min-h-svh w-full bg-[url('/images/gradient-3.png')] bg-cover  absolute top-0 right-0 flex flex-col justify-center gap-6 items-start origin-right z-49 sm:block  ${
+          className={` min-h-svh w-full bg-[url('/images/gradient-3.png')] bg-cover  absolute top-0 right-0 flex flex-col justify-center gap-6 items-start origin-right z-49   ${
             openMenu ? " animate-open-menu " : " animate-close-menu h-0"
           }`}
         >

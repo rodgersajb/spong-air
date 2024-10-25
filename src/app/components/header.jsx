@@ -36,7 +36,7 @@ export default function Header() {
           >
             Precision Work for Your Home.
           </motion.h1>
-          <motion.button
+          {/* <motion.button
             variants={fadeInAnimation}
             initial="initial"
             animate="animate"
@@ -44,7 +44,7 @@ export default function Header() {
             className="mt-6 bg-spongBlue hover:bg-lightBrown text-white font-semibold py-3 px-6 rounded w-3/4 flex items-center justify-between lg:hidden"
           >
             Contact <HiArrowSmRight />
-          </motion.button>
+          </motion.button> */}
         </div>
 
         <motion.p
