@@ -18,7 +18,7 @@ export default function ContactForm() {
           toast.error("Something went wrong while sending the email");
         }
       }}
-      className="flex flex-col justify-center items-center w-80 py-8 m-auto gap-4"
+      className="flex flex-col justify-center items-center w-80 py-8 m-auto gap-4 "
     >
       <div className="flex flex-col gap-4 items-start justify-start w-full ">
         <label className="font-bold text-lightBrown" htmlFor="name">
