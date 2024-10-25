@@ -19,8 +19,7 @@ export default function Header() {
         src="/images/home-page-pic.jpg"
         alt="Background image"
         fill
-        priority
-        
+        priority        
         className=" object-cover  blur-sm" 
       />
 
@@ -33,7 +32,7 @@ export default function Header() {
             initial="initial"
             animate="animate"
             transition={{ delay: 0.1, duration: 0.4 }}
-            className="text-white text-4xl font-bold leading-tight "
+            className="text-white text-4xl font-bold leading-tight lg:text-6xl "
           >
             Precision Work for Your Home.
           </motion.h1>
@@ -42,7 +41,7 @@ export default function Header() {
             initial="initial"
             animate="animate"
             transition={{ delay: 0.1, duration: 0.4 }}
-            className="mt-6 bg-spongBlue hover:bg-lightBrown text-white font-semibold py-3 px-6 rounded w-3/4 flex items-center justify-between"
+            className="mt-6 bg-spongBlue hover:bg-lightBrown text-white font-semibold py-3 px-6 rounded w-3/4 flex items-center justify-between lg:hidden"
           >
             Contact <HiArrowSmRight />
           </motion.button>
@@ -53,7 +52,7 @@ export default function Header() {
           initial="initial"
           animate="animate"
           transition={{ delay: 0.1, duration: 0.4 }}
-          className="text-white text-lg md:text-xl mt-4 max-w-xl font-semibold flex-end"
+          className="text-white text-lg md:text-xl mt-4 max-w-xl font-semibold flex-end lg:text-2xl lg:max-w-4xl"
         >
           Your comfort is our priority. Expert HVAC solutions tailored for you.
         </motion.p>
