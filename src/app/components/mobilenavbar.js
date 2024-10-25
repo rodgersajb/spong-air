@@ -37,11 +37,11 @@ const navLinks = [
     label: "Services",
     icon: <MdBuild />,
   },
-  {
-    href: "/posts",
-    label: "Posts",
-    icon: <FaRegNewspaper />,
-  },
+  // {
+  //   href: "/posts",
+  //   label: "Posts",
+  //   icon: <FaRegNewspaper />,
+  // },
   {
     href: "/contact",
     label: "Contact",
