@@ -28,7 +28,7 @@ export default function Container() {
 
 
   return (
-    <main className="w-full">
+    <main className="w-full py-8">
       <div className="w-screen m-auto flex justify-evenly ">
         <div className="flex flex-col items-start gap-4 justify-evenly w-[95%] m-auto py-8">
           <motion.h2
@@ -48,7 +48,7 @@ export default function Container() {
                   <motion.span
                     key={i}
                     variants={characterVariants}
-                    className="inline-block"
+                    className="inline-block "
                   >
                     {char}
                   </motion.span>
@@ -62,13 +62,13 @@ export default function Container() {
             whileInView="reveal"
             viewport={{ once: true }}
             transition={{ staggerChildren: 0.02 }}
-            className="w-[95%] m-auto"
+            className="w-[95%] m-auto lg:w-1/2 lg:m-0 lg:pl-4"
           >
             {textWords.map((word, index) => (
               <motion.span
                 key={index}
                 className="inline-block mr-2"
-                transition={{ duration: 0.1 }}
+                transition={{ duration: 0.05 }}
               >
                 {word.map((char, i) => (
                   <motion.span

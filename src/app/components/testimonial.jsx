@@ -61,7 +61,7 @@ export default function Testimonial() {
           {carouselItems.map((item, index) => (
             <CarouselItem key={index}>
               <figure className="relative h-[300px] w-full">
-                <Image src={item.image} alt={item.alt} fill />
+                <Image src={item.image} alt={item.alt} fill className="object-cover" />
                 <div className="absolute bottom-10 flex flex-col items-center justify-center left-0 right-0 rounded-2xl bg-spongWhite min-h-[100px] w-80 m-auto z-40">
                   <p className="px-2 text-xs text-spongBlack font-light text-center">
                     <ImQuotesLeft className="text-lg" />
@@ -84,7 +84,7 @@ export default function Testimonial() {
           <h2 className="text-2xl font-semibold text-spongBlue mb-4">
             Ready to Experience Luxury HVAC Solutions?
           </h2>
-          <p className="text-spongGrey mb-6">
+          <p className="text-spongBlue font-light mb-6">
             Contact us today to discuss how we can bring ultimate comfort to
             your home or business with tailored HVAC systems.
           </p>

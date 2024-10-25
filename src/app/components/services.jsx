@@ -44,11 +44,11 @@ export default function Services() {
           </span>{" "}
           to Your Home
         </h2>
-        <div className="relative w-full py-10 bg-spongGrey">
-          <TbBorderCornerSquare className="text-xl absolute top-2 left-0" />
-          <TbBorderCornerSquare className="text-xl absolute right-0 top-2 rotate-90 " />
-          <TbBorderCornerSquare className="text-xl -rotate-90 absolute bottom-2 left-0" />
-          <TbBorderCornerSquare className="text-xl rotate-180 absolute bottom-2 right-0"  />
+        <div className="relative w-full py-10 bg-spongGrey lg:w-[95%] lg:m-auto ">
+          <TbBorderCornerSquare className="text-xl absolute top-2 left-1" />
+          <TbBorderCornerSquare className="text-xl absolute right-1 top-2 rotate-90 " />
+          <TbBorderCornerSquare className="text-xl -rotate-90 absolute bottom-2 left-1" />
+          <TbBorderCornerSquare className="text-xl rotate-180 absolute bottom-2 right-1"  />
 
           {content.map((item, index) => (
             <ServiceCard item={item} key={index} />
