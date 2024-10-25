@@ -1,13 +1,16 @@
 "use client";
 import Image from "next/image";
 import { animate, motion } from "framer-motion";
+import Link from "next/link";
+import { GiPaperPlane } from "react-icons/gi";
+
 
 const fadeInAnimation = {
   initial: { opacity: 0, y: 100 },
   animate: (index) => ({
     opacity: 1,
     y: 0,
-    transition: 0.1 * index,
+    transition: 0.6 * index,
   }),
 };
 
@@ -20,7 +23,7 @@ const imageAnimation = {
 const services = [
   {
     category: "Heating Services",
-    arrow: "/images/pppointed-1.svg",
+    arrow: "/images/arrow-4.svg",
     items: [
       {
         title: "Furnace Installation and Replacement",
@@ -38,7 +41,7 @@ const services = [
   },
   {
     category: "Cooling Services",
-    arrow: "/images/pppointed-2.svg",
+    arrow: "/images/arrow-3.svg",
     items: [
       {
         title: "Air Conditioning Installation",
@@ -57,7 +60,7 @@ const services = [
   },
   {
     category: "Indoor Air Quality Solutions",
-    arrow: "/images/pppointed-1.svg",
+    arrow: "/images/arrow-4.svg",
     items: [
       {
         title: "Air Purification Systems",
@@ -77,7 +80,7 @@ const services = [
   },
   {
     category: "Ventilation Services",
-    arrow: "/images/pppointed-2.svg",
+    arrow: "/images/arrow-3.svg",
     items: [
       {
         title: "Ventilation System Installation",
@@ -97,7 +100,7 @@ const services = [
   },
   {
     category: "Emergency HVAC Services",
-    arrow: "/images/pppointed-1.svg",
+    arrow: "/images/arrow-4.svg",
     items: [
       {
         title: "24/7 Emergency Repairs",
@@ -108,7 +111,7 @@ const services = [
   },
   {
     category: "Energy Efficiency Services",
-    arrow: "/images/pppointed-2.svg",
+    arrow: "/images/arrow-3.svg",
     items: [
       {
         title: "Energy Audits",
@@ -124,7 +127,7 @@ const services = [
   },
   {
     category: "Smart Home Integration",
-    arrow: "/images/pppointed-1.svg",
+    arrow: "/images/arrow-4.svg",
     items: [
       {
         title: "Thermostat Installation",
@@ -139,7 +142,7 @@ const services = [
   },
   {
     category: "Commercial HVAC Services",
-    arrow: "/images/pppointed-2.svg",
+    arrow: "/images/arrow-3.svg",
     items: [
       {
         title: "Commercial System Installation",
@@ -159,7 +162,7 @@ const services = [
   },
   {
     category: "Financing Options",
-    arrow: "/images/pppointed-1.svg",
+    arrow: "/images/arrow-4.svg",
     items: [
       {
         title: "Flexible Payment Plans",
@@ -175,7 +178,7 @@ const services = [
   },
   {
     category: "Customer Support",
-    arrow: "/images/pppointed-2.svg",
+    arrow: "/images/arrow-3.svg",
     items: [
       {
         title: "Consultation Services",
@@ -216,6 +219,7 @@ export default function ServicesPage() {
           priority
           className="brightness-80 opacity-90 object-cover"
         />
+        <div className="absolute inset-0 bg-black opacity-30 z-30"></div>
       </header>
       <section className="w-[95%] m-auto">
         <h2 className="text-3xl font-semibold">
@@ -232,12 +236,20 @@ export default function ServicesPage() {
               <h3 className="text-2xl font-semibold border-l-8 border-spongBlue pl-2">
                 {service.category}
               </h3>
-              <ul className="flex flex-col  ">
+              {/* <Image
+                src={service.arrow} // arrow source
+                height={250}
+                width={250}
+                alt="Arrow pointing right"
+                className={`absolute even:-bottom-[135px] even:-right-[10px] odd:-left-[40px] odd:top-0`} // position arrow
+              /> */}
+
+              <ul className="flex flex-col gap-2 pt-2">
                 {service.items.map((item, index) => (
                   <motion.li
                     key={index}
-                    className="p-2 even:bg-spongGrey even:rounded-lg even:text-spongBlack odd:text-spongDarkBlue last:relative"
-                    variants={imageAnimation}
+                    className="p-2 even:bg-spongLightBlue rounded-lg first:bg-spongLightBrown even:text-spongDarkBlue first:text-spongBrown last:relative last:bg-spongGrey last:text-spongBlack min-h-[85px]"
+                    variants={fadeInAnimation}
                     initial="initial"
                     whileInView="animate"
                     viewport={{
@@ -245,22 +257,29 @@ export default function ServicesPage() {
                     }}
                     custom={index}
                   >
-                    <h4 className="text-xl font-semibold ">{item.title}</h4>
-                    <p className="text-spongBlack">{item.description}</p>
+                    <h4 className="text-xl font-semibold">{item.title}</h4>
+                    <p className="font-light text-sm pl-1">
+                      {item.description}
+                    </p>
                   </motion.li>
                 ))}
-                <figure className="relative h-[200px] flex -z-1">
-                  <Image
-                    src={service.arrow}
-                    fill
-                    alt="Arrow pointing right"
-                    className="absolute top-0 -right-25 -z-1"
-                  />
-                </figure>
               </ul>
             </li>
           ))}
         </ul>
+      </section>
+      <section className=" flex flex-col items-center justify-center gap-8 py-4">
+        <h2 className="text-3xl text-spongDarkBlue ">Questions?</h2>
+        <p className="w-[90%] m-auto text-center text-spongDarkBlue font-semibold">
+          Feel free to reach out with any questions you may have.
+        </p>
+
+        <Link
+          className="bg-spongLightBrown text-spongBrown px-4 py-2 rounded-md flex items-center justify-between font-semibold w-1/2 "
+          href="/contact"
+        >
+          Contact <GiPaperPlane />
+        </Link>
       </section>
     </main>
   );
