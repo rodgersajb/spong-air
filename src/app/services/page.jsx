@@ -231,7 +231,7 @@ export default function ServicesPage() {
               height={400}
               width={400}
               alt="Arrow pointing right"
-              className="absolute -top-[70px] right-0 left-0 "
+              className="hidden lg:block absolute -top-[70px] right-0 left-0 "
             />
           </span>{" "}
           technology ensure your HVAC systems are <span className="font-bold text-spongBlue pr-1">efficient,</span>
