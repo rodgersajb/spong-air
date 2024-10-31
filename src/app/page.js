@@ -1,6 +1,6 @@
 import Container from "./components/container";
 import Header from "./components/header";
-// import Head from "next/head";
+import Head from "next/head";
 import Services from "./components/services";
 import Testimonial from "./components/testimonial";
 
@@ -10,6 +10,9 @@ export default async function Home() {
   
   return (
     <main className="w-full">
+      <Head>
+        <title>Spongair Mechanical</title>
+      </Head>
       {/* <Head>
         <title>{data.title}</title>
         <meta name="description" content={data.description} />
