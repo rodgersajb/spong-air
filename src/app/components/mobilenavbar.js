@@ -104,15 +104,23 @@ export default function MobileNavbar() {
           </Link>
         </figure>
         <ul className="flex gap-8 text-lg font-semibold text-spongBlue">
-          {navLinks.slice(0,4).map((link, index) => (
+          {navLinks.slice(0, 4).map((link, index) => (
             <li key={index}>
               <Link href={link.href}>{link.label}</Link>
             </li>
           ))}
         </ul>
-        <Link className="bg-spongBlue text-spongWhite font-semibold py-4 px-2 rounded-sm" href="/contact">Contact Us</Link>
+        <Link
+          className="bg-spongBlue text-spongWhite font-semibold py-4 px-2 rounded-sm"
+          href="/contact"
+        >
+          Contact Us
+        </Link>
       </nav>
-      <nav className="fixed top-0 z-50 w-svw backdrop-blur-md bg-gradient-to-r from-spongWhite lg:hidden ">
+      <nav
+        className="fixed top-0 z-50 w-svw backdrop-blur-sm bg-gradient-to-r from-spongWhite to-transparent via-transparent"
+        style={{ backgroundSize: "100% 400%" }}
+      >
         <div className=" flex w-full items-center justify-between z-40  h-16">
           <figure className="relative h-12 w-20 z-50">
             <Link href="/">

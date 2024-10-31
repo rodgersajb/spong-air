@@ -19,11 +19,9 @@ export default async function Header() {
         src="/images/home-page-pic.jpg"
         alt="Background image"
         fill
-        priority        
-        className=" object-cover  blur-sm" 
+        priority
+        className=" object-cover"
       />
-
-      
 
       <section className="relative z-45 flex flex-col items-center justify-end w-full p-8 text-center md:text-left">
         <div className="flex flex-col items-center mb-4">
@@ -57,6 +55,7 @@ export default async function Header() {
           Your comfort is our priority. Expert HVAC solutions tailored for you.
         </p>
       </section>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent z-10"></div>
     </header>
   );
 }
