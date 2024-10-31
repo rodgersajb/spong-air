@@ -3,7 +3,6 @@
 import Image from "next/image";
 import splitWordsAndCharacters from "@/utils/splitStringRegex";
 import { motion, variants } from "framer-motion";
-import { once } from "events";
 
 const heading = `Our commitment to quality and comfort`;
 const text = `At SpongAir, we believe in putting people first. We are 
@@ -12,7 +11,6 @@ family. Every job we do reflects our dedication to quality, honesty,
  and exceptional service. Our skilled team works tirelessly to ensure your heating and cooling systems run perfectly.
  
  `;
- 
 
 const characterVariants = {
   hidden: { opacity: 0 },
@@ -22,10 +20,6 @@ const characterVariants = {
 export default function Container() {
   const headingWords = splitWordsAndCharacters(heading);
   const textWords = splitWordsAndCharacters(text);
-  
-
-
-
 
   return (
     <main className="w-full py-8">
@@ -61,14 +55,14 @@ export default function Container() {
             initial="hidden"
             whileInView="reveal"
             viewport={{ once: true }}
-            transition={{ staggerChildren: 0.02 }}
+            transition={{ staggerChildren: 0.01 }}
             className="w-[95%] m-auto lg:w-1/2 lg:m-0 lg:pl-4"
           >
             {textWords.map((word, index) => (
               <motion.span
                 key={index}
                 className="inline-block mr-2"
-                transition={{ duration: 0.05 }}
+                transition={{ duration: 0.01 }}
               >
                 {word.map((char, i) => (
                   <motion.span
@@ -82,10 +76,6 @@ export default function Container() {
               </motion.span>
             ))}
           </motion.p>
-          
-
-         
-        
         </div>
       </div>
     </main>

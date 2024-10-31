@@ -111,14 +111,14 @@ export default function MobileNavbar() {
           ))}
         </ul>
         <Link
-          className="bg-spongBlue text-spongWhite font-semibold py-4 px-2 rounded-sm"
+          className="bg-spongBlue text-spongWhite font-semibold py-4 px-8 rounded"
           href="/contact"
         >
           Contact Us
         </Link>
       </nav>
       <nav
-        className="fixed top-0 z-50 w-svw backdrop-blur-sm bg-gradient-to-r from-spongWhite to-transparent via-transparent"
+        className="fixed top-0 z-50 w-svw backdrop-blur-sm bg-gradient-to-r from-spongWhite to-transparent via-transparent lg:hidden "
         style={{ backgroundSize: "100% 400%" }}
       >
         <div className=" flex w-full items-center justify-between z-40  h-16">

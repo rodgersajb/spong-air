@@ -25,6 +25,7 @@ export default async function AboutPage() {
         fill
         priority
         alt="HVAC technician installing a unit"
+        object-position="center"
       />
 
       <section className="w-screen m-auto py-4 bg-spongLightBrown text-spongBrown font-normal flex flex-col gap-4 min-[400px]">
