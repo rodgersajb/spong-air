@@ -8,6 +8,13 @@ import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const metadata = {
+  title: "Spongair Mechanical",
+  description: "Expert HVAC solutions tailored for you.",
+  robots: "index, follow",
+  keywords: "HVAC, heating, cooling, air conditioning, ventilation",
+}
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
