@@ -21,19 +21,19 @@ export default async function Contact() {
           alt="Air conditioning units"
         />
       </header>
-      <section className="lg:flex lg:w-[95%] lg:m-auto  lg:justify-between lg:items-center lg:gap-10 lg:min-h-[500px]">
+      <section className="lg:flex lg:w-[95%] lg:m-auto  lg:justify-between lg:items-center  lg:min-h-[500px]">
         <ContactForm />
-        <div className="lg:w-1/2 lg:flex lg:flex-col lg:justify-between lg:items-start lg:h-[300px] lg:gap-4">
-          <p className="text-spongDarkBlue w-2/3">
+        <div className="lg:w-1/2 lg:flex lg:flex-col lg:justify-between lg:items-center lg:h-[350px]  w-[95%] m-auto">
+          <p className="text-spongDarkBlue lg:w-2/3 text-center lg:text-lg">
             Need guidance on the best HVAC solutions for your space? We’re here
             to answer questions, discuss financing, and support you every step
             of the way. Reach out today and start your journey to a comfortable
             home!
           </p>
 
-          <ul className="text-spongBlue flex flex-col gap-4">
-            <li className="text-2xl font-bold text-spongDarkBlue ">Social</li>
-            <li className="text-xl flex gap-4">
+          <ul className="text-spongBlue flex flex-col justify-center items-center">
+            
+            <li className="text-xl flex items-center gap-4">
               <FaFacebook />
               <FaTwitter />
               <FaInstagram />
