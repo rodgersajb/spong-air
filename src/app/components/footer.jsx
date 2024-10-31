@@ -31,11 +31,11 @@ export default function Footer() {
         </li>
       </ul>
       <div className="w-[95%] m-auto ">
-        <h4 className="flex gap-1">
+        <p className="flex gap-1">
           Copyright
           <FaRegCopyright className="h-6 " />
           2024. Spongair Mechanical. All rights reserved.
-        </h4>
+        </p>
       </div>
     </footer>
   );
