@@ -3,7 +3,7 @@ import Image from "next/image";
 import { animate, motion } from "framer-motion";
 import Link from "next/link";
 import { GiPaperPlane } from "react-icons/gi";
-
+import ServiceList from "./components/serviceList";
 
 const fadeInAnimation = {
   initial: { opacity: 0, y: 100 },
@@ -22,188 +22,37 @@ const imageAnimation = {
 
 const services = [
   {
-    category: "Heating Services",
-    arrow: "/images/arrow-4.svg",
-    items: [
-      {
-        title: "Furnace Installation and Replacement",
-        description: "New system installations and old system replacements.",
-      },
-      {
-        title: "Furnace Repair",
-        description: "Diagnosis and repair of heating issues.",
-      },
-      {
-        title: "Furnace Maintenance",
-        description: "Regular maintenance and tune-ups to ensure efficiency.",
-      },
-    ],
+    service: "HVAC System Installation",
+    description:
+      "Expert installation of high-efficiency heating, ventilation, and air conditioning systems tailored to fit the unique needs of each space, ensuring optimal performance and energy savings.",
+      image: "/images/pexels-2.jpg",
   },
   {
-    category: "Cooling Services",
-    arrow: "/images/arrow-3.svg",
-    items: [
-      {
-        title: "Air Conditioning Installation",
-        description:
-          "Installing new air conditioning systems, including central AC and ductless mini-splits.",
-      },
-      {
-        title: "Air Conditioning Repair",
-        description: "Troubleshooting and fixing cooling issues.",
-      },
-      {
-        title: "Air Conditioning Maintenance",
-        description: "Seasonal check-ups to keep systems running efficiently.",
-      },
-    ],
+    service: "Preventive Maintenance",
+    description:
+      "Comprehensive maintenance services that include detailed inspections, cleaning, and fine-tuning to keep HVAC systems running smoothly, extend their lifespan, and prevent unexpected breakdowns.",
+      image: "/images/pexels-3.jpg",
   },
   {
-    category: "Indoor Air Quality Solutions",
-    arrow: "/images/arrow-4.svg",
-    items: [
-      {
-        title: "Air Purification Systems",
-        description: "Installation of air purifiers and filtration systems.",
-      },
-      {
-        title: "Humidity Control",
-        description:
-          "Dehumidifiers and humidifiers to manage indoor humidity levels.",
-      },
-      {
-        title: "Duct Cleaning",
-        description:
-          "Cleaning and sanitizing air ducts to improve air quality.",
-      },
-    ],
+    service: "Indoor Air Quality Solutions",
+    description:
+      "Customized air filtration and purification solutions designed to enhance indoor air quality, reduce allergens, and promote a healthier environment for homes and businesses.",
+      image: "/images/tools.jpg",
   },
   {
-    category: "Ventilation Services",
-    arrow: "/images/arrow-3.svg",
-    items: [
-      {
-        title: "Ventilation System Installation",
-        description: "Installing proper ventilation for homes and businesses.",
-      },
-      {
-        title: "Exhaust Fan Installation",
-        description:
-          "Installing kitchen and bathroom exhaust fans to improve airflow.",
-      },
-      {
-        title: "Energy Recovery Ventilators",
-        description:
-          "Systems that improve indoor air quality while reducing energy costs.",
-      },
-    ],
+    service: "Ductwork Design and Installation",
+    description:
+      "Precise ductwork design and installation focused on maximizing airflow and energy efficiency, using quality materials and expert craftsmanship for seamless integration into any building layout.",
+      image: "/images/pexels-4.jpg",
   },
   {
-    category: "Emergency HVAC Services",
-    arrow: "/images/arrow-4.svg",
-    items: [
-      {
-        title: "24/7 Emergency Repairs",
-        description:
-          "Immediate assistance for heating or cooling failures outside regular business hours.",
-      },
-    ],
-  },
-  {
-    category: "Energy Efficiency Services",
-    arrow: "/images/arrow-3.svg",
-    items: [
-      {
-        title: "Energy Audits",
-        description:
-          "Assessing homes or buildings to identify energy-saving opportunities.",
-      },
-      {
-        title: "System Upgrades",
-        description:
-          "Recommendations for more efficient systems or improvements.",
-      },
-    ],
-  },
-  {
-    category: "Smart Home Integration",
-    arrow: "/images/arrow-4.svg",
-    items: [
-      {
-        title: "Thermostat Installation",
-        description:
-          "Smart thermostats that optimize heating and cooling based on user habits.",
-      },
-      {
-        title: "Home Automation Systems",
-        description: "Integration of HVAC with other smart home technologies.",
-      },
-    ],
-  },
-  {
-    category: "Commercial HVAC Services",
-    arrow: "/images/arrow-3.svg",
-    items: [
-      {
-        title: "Commercial System Installation",
-        description: "HVAC solutions tailored for commercial spaces.",
-      },
-      {
-        title: "Maintenance Contracts",
-        description:
-          "Regular maintenance services for commercial HVAC systems.",
-      },
-      {
-        title: "Custom Solutions",
-        description:
-          "HVAC design and installation for unique commercial needs.",
-      },
-    ],
-  },
-  {
-    category: "Financing Options",
-    arrow: "/images/arrow-4.svg",
-    items: [
-      {
-        title: "Flexible Payment Plans",
-        description:
-          "Information on financing options for installations and repairs.",
-      },
-      {
-        title: "Rebates and Incentives",
-        description:
-          "Guidance on available rebates for energy-efficient systems.",
-      },
-    ],
-  },
-  {
-    category: "Customer Support",
-    arrow: "/images/arrow-3.svg",
-    items: [
-      {
-        title: "Consultation Services",
-        description: "Free consultations to discuss HVAC needs and options.",
-      },
-      {
-        title: "Warranty Information",
-        description: "Details on service warranties and guarantees.",
-      },
-    ],
-  },
-  {
-    category: "Blog/Resources",
-    items: [
-      {
-        title: "Maintenance Tips",
-        description: "Articles or guides on how to maintain HVAC systems.",
-      },
-      {
-        title: "Seasonal Checklists",
-        description: "Seasonal maintenance checklists for homeowners.",
-      },
-    ],
+    service: "Emergency Repair Services",
+    description:
+      "Quick-response emergency repair services to address sudden HVAC issues, with skilled technicians trained to diagnose and resolve problems effectively, minimizing downtime and ensuring consistent comfort.",
+      image: "/images/pexels-5.jpg",
   },
 ];
+
 
 export default function ServicesPage() {
   return (
@@ -242,43 +91,12 @@ export default function ServicesPage() {
         <h4 className="text-xl pt-8 font-semibold lg:text-2xl ">
           What We <span className="text-spongBlue">Provide.</span>
         </h4>
-        <ul className="lg:flex lg:gap-2 lg:flex-wrap  lg:w-full lg:m-auto lg:justify-between lg:items-center">
-          {services.map((service, index) => (
-            <li key={index} className="py-4 relative lg:w-1/3 lg:basis-1/3">
-              <h3 className="text-2xl font-semibold border-l-8 border-spongBlue pl-2">
-                {service.category}
-              </h3>
-              {/* <Image
-                src={service.arrow} // arrow source
-                height={250}
-                width={250}
-                alt="Arrow pointing right"
-                className={`absolute even:-bottom-[135px] even:-right-[10px] odd:-left-[40px] odd:top-0`} // position arrow
-              /> */}
-
-              <ul className="flex flex-col gap-2 pt-2   ">
-                {service.items.map((item, index) => (
-                  <motion.li
-                    key={index}
-                    className="p-2 even:bg-spongLightBlue rounded-lg first:bg-spongLightBrown even:text-spongDarkBlue first:text-spongBrown last:relative last:bg-spongGrey last:text-spongBlack min-h-[85px] "
-                    variants={fadeInAnimation}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{
-                      once: true,
-                    }}
-                    custom={index}
-                  >
-                    <h4 className="text-xl font-semibold">{item.title}</h4>
-                    <p className="font-light text-sm pl-1">
-                      {item.description}
-                    </p>
-                  </motion.li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
+        
+      </section>
+      <section className="flex flex-col gap-20 py-20">
+        {services.map((service, index) => (
+          <ServiceList key={index} service={service} />
+        ))}      
       </section>
       <section className=" flex flex-col items-center justify-center gap-8 py-4">
         <h2 className="text-3xl text-spongDarkBlue ">Questions?</h2>
