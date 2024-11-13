@@ -12,7 +12,17 @@ import { PiPipeWrenchBold } from "react-icons/pi";
 import { AiOutlineAlert } from "react-icons/ai";
 import { FaLeaf } from "react-icons/fa";
 
-
+const fadeInAnimation = {
+  initial: { opacity: 0, y: 50 },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+   transition: {
+    delay: 0.2 * index,
+    ease: "easeInOut",
+   },
+  }),
+};
 
 
 const imageAnimation = {
@@ -104,11 +114,32 @@ export default function ServicesPage() {
           What We <span className="text-spongBlue">Provide.</span>
         </h4>
       </section>
-      <section className="grid grid-cols-3 grid-rows-2 gap-4 items-center w-[95%] m-auto">
+      <section className="relative w-[90%] h-[400px] m-auto">
+        <figure className="absolute w-full h-full m-auto -bottom-10 -z-1">
+          <Image
+            src="/images/handyman.jpg"
+            alt="HVAC technician"
+            fill
+            className="object-cover rounded-xl "
+          />
+        </figure>
+      </section>
+      <section className="grid grid-cols-3 grid-rows-2 gap-8 items-center w-[85%] m-auto">
         {services.map((service, index) => (
-          <ServiceList key={index} service={service} />
+          <motion.main
+            key={index}
+            variants={fadeInAnimation}
+            initial="initial"
+            whileInView="animate"
+            viewport={{
+              once: true,
+            }}
+            custom={index}
+            className="flex flex-col  items-stretch w-[95%] m-auto justify-evenly bg-spongGrey lg:min-h-[350px] rounded-xl z-10 relative "
+          >
+            <ServiceList service={service} />
+          </motion.main>
         ))}
-       
       </section>
       <section className=" flex flex-col items-center justify-center gap-8 py-4">
         <h2 className="text-3xl text-spongDarkBlue ">Questions?</h2>
