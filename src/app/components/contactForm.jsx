@@ -21,7 +21,7 @@ export default function ContactForm() {
       className="flex flex-col justify-center items-center w-80 py-8 m-auto gap-4 "
     >
       <div className="flex flex-col gap-4 items-start justify-start w-full ">
-        <label className="font-bold text-lightBrown" htmlFor="name">
+        <label className="font-bold text-spongBlue" htmlFor="name">
           Name *
         </label>
         <input
@@ -32,7 +32,7 @@ export default function ContactForm() {
         />
       </div>
       <div className="flex flex-col gap-4 items-start justify-start w-full  ">
-        <label className="font-bold text-lightBrown" htmlFor="email">
+        <label className="font-bold text-spongBlue" htmlFor="email">
           Email *
         </label>
         <input
@@ -43,7 +43,7 @@ export default function ContactForm() {
         />
       </div>
       <div className="flex flex-col gap-4 items-start justify-start w-full ">
-        <label className="font-bold text-lightBrown" htmlFor="message">
+        <label className="font-bold text-spongBlue" htmlFor="message">
           Message
         </label>
         <textarea

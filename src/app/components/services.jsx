@@ -3,57 +3,73 @@
 import { TbAirConditioning } from "react-icons/tb";
 import { MdDesignServices } from "react-icons/md";
 import { LiaTemperatureLowSolid } from "react-icons/lia";
-import { TbBorderCornerSquare } from "react-icons/tb";
+import {FaHouseChimney, FaBuilding, FaSchool, FaIndustry } from "react-icons/fa";
 
 
-import ServiceCard from "./serviceCard";
 
-const content = [
-  {
-    title: "Luxury HVAC Installation ",
-    description:
-      "High-end installations for custom homes, estates, and commercial spaces. Tailored systems to match architectural aesthetics, with premium equipment (e.g., top-tier brands like Trane, Carrier, or Lennox).",
-    image: "/images/pexels-1.jpg",
-    icon: <TbAirConditioning />,
-  },
-  {
-    title: "Design & Consultation",
-    description:
-      "Bespoke design services, often in collaboration with architects and interior designers, to ensure that HVAC systems complement the luxury design of a home or business.",
-    image: "/images/consult.jpg",
-    icon: <MdDesignServices />,
-  },
-  {
-    title: "Radiant Heating & Cooling Systems",
-    description:
-      "Installation of radiant heating and cooling systems for consistent temperature control without the use of forced air.",
-    image: "/images/pexels-3.jpg",
-    icon: <LiaTemperatureLowSolid />,
-  },
+const industries = [
+  { title: "Residential", icon: "house" },
+  { title: "Commercial", icon: "building" },
+  { title: "Institutional", icon: "school" },
+  { title: "Industrial", icon: "industry" },
 ];
 
 export default function Services() {
   return (
     <main className="w-full">
       <section className=" m-auto flex flex-col gap-4 overflow-scroll">
-        <h2 className="text-3xl font-normal px-4 ">
-          Luxury{" "}
-          <span className="font-bold text-spongBlue">
-            {" "}
-            Climate Control Tailored
-          </span>{" "}
-          to Your Home
-        </h2>
-        <div className="relative w-full py-10 bg-spongGrey lg:w-[95%] lg:m-auto ">
-          <TbBorderCornerSquare className="text-xl absolute top-2 left-1" />
-          <TbBorderCornerSquare className="text-xl absolute right-1 top-2 rotate-90 " />
-          <TbBorderCornerSquare className="text-xl -rotate-90 absolute bottom-2 left-1" />
-          <TbBorderCornerSquare className="text-xl rotate-180 absolute bottom-2 right-1"  />
+        
+        <h3>
+          Whether you're a homeowner or managing large-scale facilities, we have
+          the expertise to deliver trusted HVAC, gas, and refrigeration
+          solutions.
+        </h3>
+        {/* SERVICES SECTION */}
+        <section className="py-16 bg-spongGrey text-center">
+          <h2 className="text-3xl font-bold mb-12">Our Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto px-4">
+            {[
+              {
+                title: "HVAC Systems",
+                desc: "Heating, ventilation, and air conditioning solutions for any size project.",
+              },
+              {
+                title: "Sheet Metal",
+                desc: "Custom ductwork, enclosures, and structural fabrication.",
+              },
+              {
+                title: "Gas Fitting",
+                desc: "Certified gas line installations, inspections, and hookups.",
+              },
+              {
+                title: "Refrigeration",
+                desc: "Reliable refrigeration design, installation, and maintenance.",
+              },
+            ].map((service) => (
+              <div
+                key={service.title}
+                className="p-6 border rounded-lg hover:shadow-lg transition odd:text-spongBlue"
+              >
+                <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-          {content.map((item, index) => (
-            <ServiceCard item={item} key={index} />
-          ))}
-        </div>
+        {/* INDUSTRIES SECTION */}
+        <section className="py-16 bg-gray-100 text-center">
+          <h2 className="text-3xl font-bold mb-12">Industries We Serve</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto px-4">
+            {["Residential", "Commercial", "Institutional", "Industrial"].map(
+              (industry) => (
+                <div key={industry} className="p-6 border rounded-lg bg-white">
+                  <h4 className="text-lg font-semibold">{industry}</h4>
+                </div>
+              )
+            )}
+          </div>
+        </section>
       </section>
     </main>
   );

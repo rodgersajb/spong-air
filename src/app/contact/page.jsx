@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
-import ContactForm from "./components/contactForm";
+import ContactForm from "../components/contactForm";
 
 export default async function Contact() {
   return (
@@ -32,7 +32,6 @@ export default async function Contact() {
           </p>
 
           <ul className="text-spongBlue flex flex-col justify-center items-center">
-            
             <li className="text-xl flex items-center gap-4">
               <FaFacebook />
               <FaTwitter />

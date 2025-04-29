@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Head from "next/head";
 import Services from "./components/services";
 import Testimonial from "./components/testimonial";
+import ContactForm from "./components/contactForm";
 
 export default async function Home() {
   // const res = await fetch(`${process.env.YOAST_API_URL}`);
@@ -25,9 +26,13 @@ export default async function Home() {
         ></meta>
       </Head> */}
       <Header />
-      <Container />
+      
       <Services />
       <Testimonial />
+      <section id="contact" className="bg-spongGrey">
+
+      <ContactForm />
+      </section>
     </main>
   );
 }
