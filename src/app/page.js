@@ -31,7 +31,11 @@ export default async function Home() {
       <IndustriesSection />
       
       <section id="contact" className="bg-spongGrey">
-
+        
+        <h2 className="text-3xl font-bold mb-12 text-center">Contact Us</h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto text-center">
+          Need an install, repair, or consultation? Let’s talk.
+        </p>
       <ContactForm />
       </section>
     </main>
