@@ -4,10 +4,10 @@ import Head from "next/head";
 import Services from "./components/services";
 import Testimonial from "./components/testimonial";
 import ContactForm from "./components/contactForm";
+import IndustriesSection from "./components/industries";
 
 export default async function Home() {
-  // const res = await fetch(`${process.env.YOAST_API_URL}`);
-  // const data = await res.json();
+
   
   return (
     <main className="w-full">
@@ -28,7 +28,8 @@ export default async function Home() {
       <Header />
       
       <Services />
-      <Testimonial />
+      <IndustriesSection />
+      
       <section id="contact" className="bg-spongGrey">
 
       <ContactForm />

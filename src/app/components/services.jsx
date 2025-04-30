@@ -1,24 +1,31 @@
 "use client";
 
-import { TbAirConditioning } from "react-icons/tb";
-import { MdDesignServices } from "react-icons/md";
-import { LiaTemperatureLowSolid } from "react-icons/lia";
-import {FaHouseChimney, FaBuilding, FaSchool, FaIndustry } from "react-icons/fa";
+import Image from "next/image";
 
 
 
 const industries = [
-  { title: "Residential", icon: "house" },
-  { title: "Commercial", icon: "building" },
-  { title: "Institutional", icon: "school" },
-  { title: "Industrial", icon: "industry" },
+  {
+    title: "Residential",
+    image: "/images/residential.webp",
+  },
+  {
+    title: "Commercial",
+    image: "/images/Commercial.webp",
+  },
+  {
+    title: "Institutional",
+    image: "/images/Industry.webp",
+  },
+  {
+    title: "Industrial",
+    image: "/images/Industrial.webp",
+  },
 ];
-
 export default function Services() {
   return (
     <main className="w-full">
-      <section className=" m-auto flex flex-col gap-4 overflow-scroll">
-        
+      <section className=" m-auto flex flex-col z-40 gap-4 overflow-scroll">
         <h3>
           Whether you're a homeowner or managing large-scale facilities, we have
           the expertise to deliver trusted HVAC, gas, and refrigeration
@@ -57,19 +64,7 @@ export default function Services() {
           </div>
         </section>
 
-        {/* INDUSTRIES SECTION */}
-        <section className="py-16 bg-gray-100 text-center">
-          <h2 className="text-3xl font-bold mb-12">Industries We Serve</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto px-4">
-            {["Residential", "Commercial", "Institutional", "Industrial"].map(
-              (industry) => (
-                <div key={industry} className="p-6 border rounded-lg bg-white">
-                  <h4 className="text-lg font-semibold">{industry}</h4>
-                </div>
-              )
-            )}
-          </div>
-        </section>
+        
       </section>
     </main>
   );

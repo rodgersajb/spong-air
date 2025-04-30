@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default async function Header() {
+export default function Header() {
   return (
     <motion.header
       className="relative w-full h-screen flex flex-col justify-around pb-6 overflow-hidden"
