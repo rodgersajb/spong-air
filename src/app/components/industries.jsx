@@ -22,7 +22,14 @@ const industries = [
 export default function IndustriesSection() {
   return (
     <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-center col-span-full">Industries we Serve</h2>
+      <div className="text-center mb-8">
+        <p className="uppercase text-spongDarkGrey tracking-wider text-sm font-medium mb-2">
+          Industries
+        </p>
+        <h2 className="text-3xl md:text-4xl font-bold text-spongBlue">
+          We Serve
+        </h2>
+      </div>
       {industries.map((industry, index) => (
         <figure
           key={index}

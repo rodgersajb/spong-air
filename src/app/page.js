@@ -1,8 +1,8 @@
-import Container from "./components/container";
+
 import Header from "./components/header";
 import Head from "next/head";
 import Services from "./components/services";
-import Testimonial from "./components/testimonial";
+
 import ContactForm from "./components/contactForm";
 import IndustriesSection from "./components/industries";
 
@@ -25,18 +25,23 @@ export default async function Home() {
           content="width=device-width, initial-scale=1.0"
         ></meta>
       </Head> */}
-      <Header />
       
+      <Header />
+
       <Services />
       <IndustriesSection />
-      
-      <section id="contact" className="bg-spongGrey">
-        
-        <h2 className="text-3xl font-bold mb-12 text-center">Contact Us</h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto text-center">
-          Need an install, repair, or consultation? Let’s talk.
-        </p>
-      <ContactForm />
+
+      <section id="contact" className="bg-spongGrey pt-4">
+        <div className="text-center py-4">
+          <p className="uppercase text-spongDarkGrey tracking-wider text-sm font-medium mb-2">
+            Need an install, repair, or consultation? Let’s talk.
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-spongBlue">
+            Contact Us
+          </h2>
+        </div>
+
+        <ContactForm />
       </section>
     </main>
   );

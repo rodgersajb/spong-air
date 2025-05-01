@@ -13,8 +13,7 @@ import { BiInfoSquare } from "react-icons/bi";
 import { MdBuild } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
 import {
-  FaFacebook,
-  FaTwitter,
+  
   FaInstagram,
   FaRegCopyright,
 } from "react-icons/fa";
@@ -79,8 +78,8 @@ export default function MobileNavbar() {
 
       {/* Mobile Nav */}
       <nav className="fixed top-0 w-full lg:hidden bg-spongWhite z-50">
-        <div className="flex w-full items-center justify-between h-16 px-4">
-          <figure className="relative h-12 w-20">
+        <div className="flex w-full items-center justify-between h-16 pr-4">
+          <figure className="relative h-16 w-28">
             <Link href="/">
               <Image
                 className="drop-shadow-lg contrast-125"
