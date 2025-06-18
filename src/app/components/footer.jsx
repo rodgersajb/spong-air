@@ -11,20 +11,19 @@ export default function Footer() {
           src="/images/spong-logo.png"
           alt="SpongAir Logo"
           fill
-          className="m-auto"
+          className="m-auto object-contain"
         />
       </figure>
       <section className="text-spongDarkBlue flex flex-col items-center justify-center ">
-        <ul className=" flex gap-4  m-auto py-4 ">
-          <li className="text-xl">
-            <FaInstagram />
-          </li>
-        </ul>
+       
+        <Link href="https://www.instagram.com/spongair?igsh=MjZjdHNyMjl2bnVq" className="cursor-pointer text-xl">
+          <FaInstagram />
+        </Link>
         <div className=" m-auto flex flex-col items-center ">
           <p className="flex">
             Copyright
             <FaRegCopyright className="h-6 " />
-            2024. Spongair Mechanical.
+            2025. Spongair Mechanical.
           </p>
           <p> All rights reserved.</p>
         </div>

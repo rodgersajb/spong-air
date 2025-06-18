@@ -34,7 +34,7 @@ export default async function Home() {
       <section id="contact" className="bg-spongGrey pt-4">
         <div className="text-center py-4">
           <p className="uppercase text-spongDarkGrey tracking-wider text-sm font-medium mb-2">
-            Need an install, repair, or consultation? Let’s talk.
+           Installation, repair, or maintenance? Let’s talk.
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-spongBlue">
             Contact Us

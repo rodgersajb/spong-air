@@ -11,7 +11,7 @@ const services = [
   },
   {
     title: "Sheet Metal",
-    desc: "Custom ductwork, enclosures, and structural fabrication.",
+    desc: "Custom fabrication, design and install to meet SMACNA requirements.",
     icon: <MdBuild className="text-4xl text-spongBlue mb-4" />,
   },
   {

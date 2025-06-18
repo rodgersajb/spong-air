@@ -1,20 +1,17 @@
 import Image from "next/image";
 
 const industries = [
+  
   {
-    title: "Residential",
-    image: "/images/Residential.webp",
-  },
-  {
-    title: "Commercial",
-    image: "/images/Commercial.webp",
-  },
-  {
-    title: "Institutional",
-    image: "/images/Industry.webp",
+    title: "Design Build",
+    image: "/images/FullSizeRender.webp",
   },
   {
     title: "Industrial",
+    image: "/images/Industry.webp",
+  },
+  {
+    title: "Residential",
     image: "/images/Industrial.webp",
   },
 ];
