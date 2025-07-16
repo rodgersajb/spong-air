@@ -7,7 +7,7 @@ import MobileNavbar from "./mobilenavbar";
 export default function Header() {
   return (
     <motion.header
-      className="relative w-full h-svh flex flex-col justify-around pb-6 overflow-hidden"
+      className="relative w-full h-svh flex flex-col justify-around pb-6 overflow-hidden lg:h-dvh"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
@@ -21,21 +21,27 @@ export default function Header() {
         className="object-cover brightness-75"
       />
 
-      <section className="relative z-45 h-[40%] flex flex-col items-start justify-center w-full p-8 ">
+      <section className="relative z-45 h-[40%] flex flex-col items-start justify-center w-full p-8 lg:flex-col lg:justify-center lg:items-center">
         <h1 className="text-white text-2xl font-bold leading-tight lg:text-6xl ">
           Keeping You Cool, Comfortable, and Connected
         </h1>
         <h2 className="text-white text-lg md:text-xl mt-4 max-w-xl font-semibold flex-end lg:text-2xl lg:max-w-4xl ">
           HVAC, Gas, Refrigeration & Sheet Metal Solutions Designed to Last.
         </h2>
-        <motion.a
-          href="#contact"
+        <motion.button
+          type="button"
+          onClick={() => {
+            document
+              .getElementById("contact")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-6 inline-block border m-auto border-white text-white px-6 py-2 rounded text-sm font-medium transition-colors duration-300 hover:bg-white hover:text-spongBlue"
+          className="mt-6 inline-flex items-center justify-center gap-2 border border-white text-white bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl text-base font-semibold shadow-md hover:bg-white hover:text-spongBlue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white"
         >
+          
           Get In Touch
-        </motion.a>
+        </motion.button>
       </section>
     </motion.header>
   );

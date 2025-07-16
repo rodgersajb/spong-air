@@ -12,20 +12,15 @@ import { HiHomeModern } from "react-icons/hi2";
 import { BiInfoSquare } from "react-icons/bi";
 import { MdBuild } from "react-icons/md";
 import { HiOutlineMail } from "react-icons/hi";
-import {
-  
-  FaInstagram,
-  FaRegCopyright,
-} from "react-icons/fa";
+import { FaInstagram, FaRegCopyright } from "react-icons/fa";
 
 const navLinks = [
   { href: "#", label: "Home", icon: <HiHomeModern /> },
-  { href: "#about", label: "About", icon: <BiInfoSquare /> },
   { href: "#services", label: "Services", icon: <MdBuild /> },
-  { href: "#contact", label: "Contact", icon: <HiOutlineMail /> },
+  { href: "#industries", label: "Industries We Serve", icon: <BiInfoSquare /> },
 
   {
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/spongair?igsh=MjZjdHNyMjl2bnVq",
     label: "Instagram",
     icon: <FaInstagram />,
   },
@@ -44,17 +39,37 @@ export default function MobileNavbar() {
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState(false);
 
+  function handleLinkClick(event, href) {
+    if (href.startsWith("#")) {
+      event.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        const navbarHeight = 110; // adjust based on your actual fixed navbar height
+        const targetPosition =
+          target.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = targetPosition - navbarHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }
+
+      // If you have a state toggle for mobile menu (like React useState)
+      // You would call: setOpenMenu(false);
+    }
+  }
+
   const toggleMenu = () => setOpenMenu(!openMenu);
-  const handleLinkClick = () => setOpenMenu(false);
 
   return (
     <main className="w-full fixed top-0 left-0 z-50 overflow-x-hidden">
       {/* Desktop Nav */}
       <nav className="hidden lg:flex w-full bg-spongWhite items-center justify-between px-4">
-        <figure className="relative h-[70px] w-[110px]">
+        <figure className="relative h-[110px] w-[220px]">
           <Link href="/">
             <Image
-              className="drop-shadow-lg contrast-125"
+              className="object-contain drop-shadow-lg contrast-125"
               fill
               src="/images/spong-logo.png"
               alt="Spongair logo"
@@ -63,12 +78,13 @@ export default function MobileNavbar() {
         </figure>
         <ul className="flex gap-8 text-lg font-semibold text-spongBlue">
           {navLinks.slice(0, 4).map((link, index) => (
-            <li key={index}>
+            <li key={index} onClick={(e) => handleLinkClick(e, link.href)}>
               <a href={link.href}>{link.label}</a>
             </li>
           ))}
         </ul>
         <a
+          onClick={(e) => handleLinkClick(e, "#contact")}
           href="#contact"
           className="bg-spongBlue text-spongWhite font-semibold py-4 px-8 rounded"
         >
