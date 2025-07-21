@@ -143,12 +143,12 @@ export default function MobileNavbar() {
               </a>
             </motion.li>
           ))}
-          <li className="pt-4 text-sm text-spongGrey">
+          {/* <li className="pt-4 text-sm text-spongGrey">
             <span className="flex items-center gap-1">
               Copyright <FaRegCopyright className="inline-block" /> 2024.
               Spongair Mechanical. All rights reserved.
             </span>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </main>

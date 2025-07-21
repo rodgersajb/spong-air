@@ -37,9 +37,9 @@ export default function Header() {
           }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="mt-6 inline-flex items-center justify-center gap-2 border border-white text-white bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl text-base font-semibold shadow-md hover:bg-white hover:text-spongBlue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white"
+          aria-label="Scroll to contact section"
+          className="mt-6 inline-flex items-center justify-center gap-2 border border-white text-white bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl text-base font-semibold shadow-md hover:bg-white hover:text-spongBlue transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2"
         >
-          
           Get In Touch
         </motion.button>
       </section>
